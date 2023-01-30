@@ -1,0 +1,30 @@
+<form action="/api/links" method="POST" id="add_link">
+  <div class="new_link">
+    <div class="form-group">
+      <label for="titulo" class="text-light">Título</label>
+      <input
+        type="text"
+        class="form-control"
+        name="titulo"
+        placeholder="coloca o titulo"
+      />
+    </div>
+    <div class="form-group">
+      <label for="url" class="text-light">Link</label>
+      <input type="text" class="form-control" name="url" placeholder="o Link" />
+    </div>
+    <div class="form-group">
+      <label for="descricao" class="text-light">Descrição</label>
+      <input
+        type="text"
+        class="form-control"
+        name="descricao"
+        placeholder="a descricao"
+      />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class="btn text-dark update">Salvar</button>
+  </div>
+</form>

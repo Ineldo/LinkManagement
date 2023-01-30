@@ -1,0 +1,15 @@
+<%for(var i=0; i<links.length; i++){ %>
+<tr>
+    <td><%=links[i].titulo.substring(0, 25)%></td>
+    <td id="url"><a href="<%=links[i].url%>"><%=links[i].url.substring(0, 50)%></td>
+    <td><%=links[i].descricao%></td>
+    <td>
+        <a href="/update-link?id=<%=links[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a href="#" class="btn border-shadow delete" data-id="<%=links[i]._id%>">
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+<% } %>

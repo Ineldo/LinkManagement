@@ -1,0 +1,40 @@
+<%-include ('include/_header')%>
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/" class="border-shadow">
+                    <span class="text-gradient"><i class="fas fa-angle-double-left"></i>Todos Links</i></span>
+                </a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Link</h2>
+            <span class="text-light">Actualizar o link</span>
+        </div>
+        <form method="POST" action="api/link/<%links._id%>" id="update_link">
+            <div class="update_link">
+                <div class="form-group">
+                    <label for="titulo" class="text-light">Título</label>
+                    <input type="hidden" name="id" value="<%=links.id%>">
+                    <input type="text" name="titulo" value="<%=links.titulo%>"placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="url" class="text-light">Link</label>
+                    <input type="text" name="url" value="<%=links.url%>"placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="descricao" class="text-light">Descrição</label>
+                    <input type="text" name="descricao" value="<%=links.descricao %>" placeholder="">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <button class="btn text-dark update"type="submit">Salvar</button>
+            </div>
+        </form>
+
+    </div>
+</main>
+
+<%-include ('include/_footer')%>
